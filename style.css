@@ -1,0 +1,692 @@
+/*
+    background-color: #f8fafc;  header background color
+    background-color: #0ea5e9;  button background color
+    color: #334155;  h1-h6 colors
+    color: #64748b   p colors
+*/
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 100px;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+}
+/* This is the header styling */
+header {
+    display: flex;
+    background-image: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
+    gap: 2.5%;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    padding: 9px;
+}
+
+/* This is controlling both the schoolLogo display and also the a decoration and other(a entirely) */
+header .schoolLogo { 
+    display: inline-flex;
+    margin: 0;
+    text-decoration: none;
+    align-items: center;
+    gap: 12px;
+}
+
+header .logo {
+    aspect-ratio: 60/60;
+    max-width: 55px;
+    height: 55px;
+    padding-left: 100px;
+
+}
+
+.logo img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;       /* makes it circular like the crest in the screenshot */
+  object-fit: contain;
+  background-color: #fff;   /* white backing so the crest doesn't blend into the header bg */
+}
+
+/* This covers the spacing from logo left side */
+header .schoolLogoandText {
+    align-items: center;
+}
+
+header .schoolName {
+    color: #0f172a;
+    font-size: 25px;
+    margin: 0;  
+    font-family: "Outfit", sans-serif;
+}
+
+header .schoolLocation {
+    color: #64748b;
+    margin: 0;
+    font-size: 14px;
+}
+
+header .menu ul {
+    display: flex;
+    gap: 20px;
+    text-decoration: none;
+    list-style: none;
+}
+
+header .menu ul li {
+    gap: 20px;
+    text-decoration: none;
+}
+
+header .menu a {
+    text-decoration: none;
+    gap: 20px;
+    color: #64748b;
+    font-size: 18px;
+}
+
+header .btn {
+    text-decoration: none;
+    color: #64748b;
+    background-color: #0ea5e9;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+/* This is the hero section styling */
+.hero {
+    background-image: url(fss_clear.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 75vh;
+    align-items: center;
+    text-align: center;
+    padding-top: 150px;
+    justify-content: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: -20px; /* extends beyond edges to hide blurred border artifacts */
+  background-image: url('school-gate.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(6px);
+  z-index: -1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 80px 60px;
+}
+
+.hero span {
+    color: #0ea5e9;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 50px;
+}
+
+.hero p {
+    color: white;
+    font-size: 20px;
+}
+
+.hero div.hero-btn {
+    gap: 16px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.hero .color-btn a {
+    background-color: #0ea5e9;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.hero .trans-btn a {
+    background-color: transparent;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+    border: 1px;
+    border-color: white;
+    border-style: groove;
+}
+
+/* This is the graduatesStaffsProgrammes section styling */
+.graduatesStaffsProgrammes {
+    min-height: 20vh;
+    background-image: linear-gradient(135deg, rgb(238, 242, 255) 0%, rgb(186, 230, 253) 100%);
+    display: flex;
+    gap: 1%;
+    align-items: center;
+    justify-content: center;
+}
+
+.graduatesStaffsProgrammes strong {
+    font-size: 24px;
+    color: black;
+    font-family: "Outfit" sans-serif;
+}
+
+.graduatesStaffsProgrammes span {
+    color: #64748b;
+    font-size: 13.6px;
+}
+
+.graduatesStaffsProgrammes .info-bar {
+    background-color: white;
+    width: 15%;
+    border-radius: 10px;
+}
+
+/* This is the welcome-message section styling */
+.welcome-message {
+    display: flex;
+    gap: 8%;
+    min-height: 110vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-message .message-image {
+    width: 40%;
+    padding: 0 1.5rem;
+}
+
+.welcome-message .message-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.welcome-message .message-text {
+    width: 40%;
+}
+
+/* About Us section style */
+.about-us {
+    min-height: 110vh;
+    display: flex;
+    gap: 20px;
+    background-color: #f8fafc;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-us .about-us-text {
+    width: 40%;
+    padding-bottom: 80px;
+    margin-top: 5%;
+}
+
+.about-us .about-us-text h4 {
+    color: #0ea5e9;
+    font-size: 14px;
+    border-radius: 20px;
+    padding: 4px 12px;
+    background-color: rgba(14, 165, 233, 0.1);
+    margin-bottom: 16px;
+    width: fit-content;
+    margin: 0px 0px 16px;
+}
+
+.about-us .about-us-text h2 {
+    font-size: 48px;
+}
+
+.about-us .about-us-text h3 {
+    font-size: 18px;
+}
+
+.about-us .about-us-text p{
+    color: #64748b;
+    font-size: 16px;
+}
+
+.about-us .about-us-text button {
+    text-decoration: none;
+    color: #0ea5e9;
+    background-color: transparent;
+    border: 2px solid;
+    border-radius: 25px;
+    border-style: groove;
+    border-color: #0ea5e9;
+    padding: 14px 28px;
+    font-size: 16px;
+}
+
+.about-us .about-us-image {
+    width: 40%;
+    box-shadow: #334155;
+    background-color: white;
+    border-radius: 20px;
+    border-style: hidden; 
+    padding-bottom: 20px;
+    padding: 10px;   
+}
+
+.about-us .about-us-image .who-we-are-image-text {
+    background-color: #f8fafc;
+    float: right;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    padding: auto;
+    border-radius: 10px;
+    width: 20%;
+    height: auto;
+    align-items: center;
+    text-align: center;
+}
+
+.about-us .about-us-image .who-we-are-image-text h3 {
+    font-size: 32px;
+    font-style: normal;
+    color: #0ea5e9;
+    margin: 1%;
+    padding: 1%;
+}
+
+.about-us .about-us-image .who-we-are-image-text p {
+    font-size: 16px;
+    font-style: normal;
+    color: #334155;
+    margin: 1%;
+    padding:1%;
+}
+
+.about-us .about-us-image img {
+    max-width: 100%;
+    margin-bottom: 5%;
+}
+
+/* Academics section style */
+.academics {
+    background-image: linear-gradient(180deg, #ffffff 0%, #e2e8f0 100%);;
+    min-height: 125vh;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.academics .academics-intro h4 {
+    color: #0ea5e9;
+    font-size: 14px;
+    border-radius: 20px;
+    padding: 4px 12px;
+    background-color: #f8fafc;
+    margin-bottom: 16px;
+    margin: 0 auto;
+    width: fit-content;
+    text-align: center;
+}
+
+.academics .academics-intro h2 {
+    font-size: 24px;
+    text-align: center;
+}
+
+.academics .academics-intro p {
+    font-size: 16px;
+    color: #334155;
+    text-align: center;
+}
+
+.academics .filter-btn {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-decoration: none;
+    list-style: none;
+    margin: 32px 0px;
+}
+
+.academics button {
+    background-color: white;
+    border-radius: 20px;
+    border: 1px;
+    border-color: #64748b;
+    border-style: groove;
+    padding: 8px 24px;
+}
+
+.academics button a {
+    color: #64748b;
+    text-decoration: none;
+}
+
+.academics button:hover { /* This will help me with the hover change for full <button> */
+    background-color: black;
+} 
+
+.academics button a:hover { /* This will help me with the hover change for <a> tag */
+    color: white;
+}
+
+.academics .academic-programmes {
+    display: flex;
+    flex-wrap: wrap;
+    /* This helps to make the content go to the next link automatically when theirs no space again to contain the display: flex; that is required to keep moving*/    
+    gap: 30px;
+    align-items: center;
+    align-items: stretch;  /* This helps to make all blocks same height and width */
+}
+
+.academics .academic-programmes .academics-card {
+    flex: 1 1 300px; /* This is required for a flex-wrap to work properly */
+    min-width: 300px;
+    max-width: 300px;
+    background: white;
+    background-color: white;
+    border-radius: 10px;
+    border-style: hidden;
+    border: 2px;
+    padding: 32px;
+    max-height: 25%;
+}
+
+.academics .academic-programmes .academics-card:hover {
+    border: 2px;
+    border-style: groove;
+    border-color: #0ea5e9;
+}
+
+.academics .academic-programmes h4 {
+    font-size: 12px;
+    color: #0ea5e9;
+}
+
+.academics .academic-programmes a {
+    color: #0ea5e9;
+    background-color: transparent;
+    border: 2px;
+    border-radius: 10px;
+    border-color: #0ea5e9;
+    border-style: groove;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Ready to start section style */
+.ready-to-start {
+    min-height: 40vh;
+    background-color: #0f172a;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.ready-to-start h2 {
+    font-family: "Outfit", sans-serif;
+    font-size: 40px;
+    color: white;
+}
+
+.ready-to-start p {
+    font-size: 16px;
+    color: white;
+}
+
+.ready-to-start .ready-to-start-btn {
+    display: inline-flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.ready-to-start .ready-to-start-btn .color-btn{
+    background-color: white;
+    color: #334155;
+    padding: 13px 26px;
+    border-radius: 22px;
+    text-decoration: none;
+    border: 2px solid;
+}
+
+.ready-to-start .ready-to-start-btn .trans-btn {
+    background-color: transparent;
+    color: #0ea5e9;
+    font-size: 16px;
+    border: 2px solid;
+    padding: 13px 26px;
+    border-radius: 20px;
+    text-decoration: none;
+    border-style: hidden;
+}
+
+/* Contact section style */
+.contact-section {
+    padding: 60px 80px;
+    color: #1a2b4c;
+    min-height: 90vh;
+    background-image: linear-gradient(180deg, #ffffff 0%, #e2e8f0 100%);
+    display: flex;
+    gap: 130px;
+    justify-content: center;
+}
+
+.contact-section h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18.72px;
+    color: #0f172a;
+}
+
+.contact-section label {
+    font-size: 14.4px;
+    color: #334155;
+    margin: 0px 0px 8px;
+    font-weight: 550;
+}
+
+.contact-section p {
+    font-size: 16px;
+    color: #334155;
+    font-weight: 550;
+}
+
+.contact-section .contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 60px;
+    max-width: 50%;
+    min-width: 50%;
+}
+
+.contact-section .contact-form {
+    flex: 1 1 400px;
+    border-radius: 20px;
+    background-color: white;
+    padding: 32px;
+    min-width: 200%;
+    padding-right: 64px;
+}
+
+.contact-section .contact-info {
+    flex: 1 1 350px;
+    margin-top: 0;
+    padding-top: 0;
+    min-width: 50%;
+    max-width: 50%;
+}
+
+/* This will be the styling for both the input forms and the textarea form */
+.contact-section .contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
+    margin-bottom: 6%;
+    font-weight: 600;
+}
+
+.contact-form .btn-send {
+    font-size: 13.3333px;
+    padding: 12px 24px;
+    color: white;
+    background-color: #0ea5e9;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+}
+
+.contact-form label {
+    display: block;      /* forces it onto its own line above the input */
+    margin-bottom: 8px; 
+}
+
+/* This is responsible for making the icons and the texts flex */
+.contact-section .info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin: 1%;
+}
+
+.info-item span {
+    font-size: 16px;
+    color: #334155;
+}
+
+.info-item a {
+    font-size: 16px;
+    color: #334155;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.map-wrapper iframe {
+    border-top-left-radius: 20px;
+}
+
+/* footer page styling */
+footer {
+    background-image: linear-gradient(135deg, rgb(2, 6, 23) 0%, rgb(51, 65, 85) 100%);
+    padding-top: 40px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+footer .schoolLogo { 
+    display: inline-flex;
+    margin: 0;
+    text-decoration: none;
+    gap: 12px;
+}
+
+footer .logo {
+    aspect-ratio: 60/60;
+    max-width: 55px;
+    height: 55px;
+    padding-left: 100px;
+    display: block;
+}
+
+footer .logo img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;       /* makes it circular like the crest in the screenshot */
+    object-fit: contain;
+    background-color: #fff;   /* white backing so the crest doesn't blend into the header bg */
+}
+
+/* This covers the spacing from logo left side */
+footer .schoolLogoandText {
+    align-items: center;
+}
+
+.logoMotto h4 {
+    color: white;
+}
+
+.logoMotto p {
+    color: #ffffffb3;
+}
+
+footer .top-footer h5 {
+    color: white;
+    font-size: 13.28px;
+    font-weight: 600;
+}
+
+footer .top-footer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 80px;
+}
+
+footer .top-footer ul {
+    padding-left: 0;
+    margin-left: 0;
+}
+
+footer .top-footer li {
+    list-style: none;
+    margin: 0px 0px 12px;
+}
+
+footer .top-footer li a {
+    text-decoration: none;
+    font-size: 14.4px;
+    color: #ffffffb3;
+    font-weight: 550;
+}
+
+footer .Search-the-site {
+    color: white;
+}
+
+footer .search-box input {
+    background-color: transparent;
+    border-style: groove;
+    border-color: #ffffff0a;
+    border-radius: 10px;
+}
+
+footer .search-box input {
+    color: #ffffff0a;
+    padding: 9.6px 14.4px;
+}
+
+footer .search-btn {
+    background-color: #0ea5e9;
+    padding: 8px 12.8px;
+    border-radius: 10px;
+    border-style: none;
+}
+
+footer .down-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0px;
+    color: #ffffff80;
+    font-size: 14px;
+}
